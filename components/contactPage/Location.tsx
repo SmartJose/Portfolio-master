@@ -4,9 +4,9 @@ import { motion } from "framer-motion"
 
 const infoItems = [
   { Icon: MdLocationOn, field: "Address",   value: "Giza, AI Jizah, Egypt"           },
-  { Icon: MdEmail,      field: "Email",     value: "k.legend.dev@gmail.com" },
-  { Icon: MdPhone,      field: "Phone",     value: "+81 158 461 254"        },
-  { Icon: FaBriefcase,  field: "Freelance", value: "Available",  highlight: true },
+  { Icon: MdEmail,      field: "Email",     value: "omarhassanisme@gmail.com" },
+  { Icon: MdPhone,      field: "Phone",     value: "+20 122 465 9024"        },
+  { Icon: FaBriefcase,  field: "Open to work", value: "Available",  highlight: true },
 ]
 
 const list = {
@@ -33,7 +33,7 @@ export default function Location() {
         {/* wave blob top-right */}
         <div className="absolute -top-10 -right-10 w-56 h-56 bg-white/15 rounded-full blur-3xl pointer-events-none" />
         {/* wave blob bottom-left */}
-        <div className="absolute -bottom-10 -left-10 w-40 h-40 bg-white/10 rounded-full blur-2xl pointer-events-none" />
+        <div className="absolute -bottom-10 -left-10 w-40 h-40 bg-white/10 rounded-full blur-3xl pointer-events-none" />
 
         {/* top: badge + heading */}
         <div className="relative z-10">
@@ -94,7 +94,7 @@ export default function Location() {
         className="relative overflow-hidden"
       >
         <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d209750.33516664647!2d135.30866491308594!3d34.69374!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6000f18840de5dbd%3A0xef10bd780eb85b3c!2sGiza%2C%20Egypt!5e0!3m2!1sen!2sjp!4v1666978319596!5m2!1sen!2sjp"
+          src="https://www.google.com/maps?q=Giza,+AI+Jizah,+Egypt&output=embed"
           style={{ border: 0 } as React.CSSProperties}
           allowFullScreen={false} loading="lazy" referrerPolicy="no-referrer-when-downgrade"
           className="w-full h-full min-h-[38rem]"

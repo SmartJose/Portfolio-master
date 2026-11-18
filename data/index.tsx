@@ -404,7 +404,7 @@ export const worksData: WorkData[] = [
     liveUrl: "https://amazoning.onrender.com/",
     githubUrl: "https://github.com/Heaven-TS/Full-stack-Ecommerce",
     images: [
-      { url: "https://images.unsplash.com/photo-1563986768609-322da13575f3?w=800&q=80" },
+      { url: "/images/projects/amazoning-hero.png" },
     ],
     technologies: ["React", "Node.js", "Express", "MongoDB", "Stripe"],
     workTabs: [{ tab: "All" }, { tab: "Full-Stack" }],
@@ -510,7 +510,7 @@ export const worksData: WorkData[] = [
     liveUrl: "https://studio-tremo.com/",
     githubUrl: "",
     images: [
-      { url: "https://api.microlink.io?url=https%3A%2F%2Fstudio-tremo.com%2F&screenshot=true&meta=false&embed=screenshot.url" },
+      { url: "/images/projects/hk-wedding-hero.png" },
     ],
     technologies: ["HTML", "CSS", "JavaScript", "GSAP"],
     workTabs: [{ tab: "All" }, { tab: "Web Design" }],
@@ -549,7 +549,7 @@ export const worksData: WorkData[] = [
     liveUrl: "https://www.ecruspose.jp/",
     githubUrl: "",
     images: [
-      { url: "https://images.unsplash.com/photo-1606800052052-a08af7148866?w=800&q=80" },
+      { url: "/images/projects/kuraudia-hero.png" },
     ],
     technologies: ["WordPress", "CSS", "JavaScript"],
     workTabs: [{ tab: "All" }, { tab: "Web Design" }],
