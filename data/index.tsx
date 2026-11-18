@@ -172,7 +172,7 @@ export const quoteData: TestimonialData = {
   id: 99,
   quote:
     "The best way to predict the future is to invent it. Code is not just instructions for machines — it is the language through which we shape tomorrow.",
-  userName: "Takumi Shimizu",
+  userName: "Omar Hassan",
   userProfession: "Senior AI & Full Stack Engineer",
   userImage: {
     url: "/images/avatar.png",

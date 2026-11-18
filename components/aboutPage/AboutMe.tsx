@@ -15,10 +15,8 @@ export default function AboutMe() {
       </article>
 
       <ul className="grid grid-cols-1 mt-6 location sm:grid-cols-2 gap-y-2">
-        <MyInfo field="residence" value="Japan" />
-        <MyInfo field="address" value="Osaka, Japan" />
-        <MyInfo field="email" value="k.legend.dev@gmail.com" />
-        <MyInfo field="freelance" value="Available" />
+        <MyInfo field="address" value="Giza, AI Jizah, Egypt" />
+        <MyInfo field="email" value="omarhassanisme@gmail.com" />
       </ul>
     </div>
   )
