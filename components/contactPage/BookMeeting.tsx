@@ -39,12 +39,14 @@ function Field({ label, icon: Icon, error, children }: {
 }) {
   return (
     <div className="group">
-      <label className="flex items-center gap-2 text-[1.1rem] font-bold text-slate-400 uppercase tracking-[0.14em] mb-2">
-        <Icon className="text-main-orange text-[1.3rem]" />
+      <label className="flex items-center gap-2 text-[1.15rem] font-bold text-slate-600 uppercase tracking-[0.14em] mb-2.5">
+        <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-main-orange/10">
+          <Icon className="text-main-orange text-[1.35rem]" />
+        </span>
         {label}
       </label>
-      <div className="rounded-xl border border-gray-200 bg-white overflow-hidden
-                      focus-within:border-main-orange focus-within:shadow-[0_0_0_3px_rgba(86,200,232,0.12)]
+      <div className="rounded-2xl border border-slate-200 bg-slate-50/70 shadow-[0_4px_18px_rgba(15,23,42,0.04)]
+                      focus-within:border-[#56c8e8] focus-within:bg-white focus-within:shadow-[0_0_0_4px_rgba(86,200,232,0.12)]
                       transition-all duration-200">
         {children}
       </div>
@@ -228,119 +230,121 @@ export default function BookMeeting() {
       <motion.div
         initial={{ opacity: 0 }} animate={{ opacity: 1 }}
         transition={{ duration: 0.4, delay: 0.08 }}
-        className="flex flex-col justify-center px-10 py-10 bg-white overflow-y-auto myScroll space-y-4"
+        className="flex flex-col justify-center px-8 py-8 bg-slate-50 overflow-y-auto myScroll"
       >
-        {/* name + email */}
-        <div className="grid grid-cols-2 gap-4">
-          <Field label="Name" icon={FaUser} error={errors.fullName?.message}>
-            <input
-              {...register("fullName", { required: "Required" })}
-              type="text" placeholder="Full name"
-              className="w-full px-4 py-3.5 bg-transparent text-[1.4rem] text-gray-800 placeholder:text-gray-300 focus:outline-none"
-            />
-          </Field>
-          <Field label="Email" icon={FaEnvelope} error={errors.email?.message}>
-            <input
-              {...register("email", {
-                required: "Required",
-                validate: (v) => isValidEmail(v) || "Invalid email",
-              })}
-              type="email" placeholder="your@email.com"
-              className="w-full px-4 py-3.5 bg-transparent text-[1.4rem] text-gray-800 placeholder:text-gray-300 focus:outline-none"
-            />
-          </Field>
-        </div>
-
-        {/* country + company */}
-        <div className="grid grid-cols-2 gap-4">
-          <div id="country-picker" className="relative">
-            <Field label="Country" icon={FaGlobe}>
-              <input type="hidden" {...register("country")} value={selectedCountry?.name ?? ""} />
-              <button
-                type="button" onClick={() => setCountryOpen((o) => !o)}
-                className="w-full text-left flex items-center justify-between gap-2 px-4 py-3.5 text-[1.4rem] text-gray-800 focus:outline-none"
-              >
-                {selectedCountry
-                  ? <span className="truncate">{selectedCountry.flag} {selectedCountry.name}</span>
-                  : <span className="text-gray-300">Select</span>
-                }
-                <svg className={`w-4 h-4 text-gray-400 flex-shrink-0 transition-transform duration-200 ${countryOpen ? "rotate-180" : ""}`}
-                  fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                </svg>
-              </button>
+        <div className="mx-auto w-full max-w-[52rem] rounded-[2rem] border border-slate-200/80 bg-white p-7 shadow-[0_18px_50px_rgba(15,23,42,0.08)] space-y-5">
+          {/* name + email */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <Field label="Name" icon={FaUser} error={errors.fullName?.message}>
+              <input
+                {...register("fullName", { required: "Required" })}
+                type="text" placeholder="Full name"
+                className="w-full px-4 py-4 bg-transparent text-[1.45rem] text-gray-800 placeholder:text-slate-300 focus:outline-none"
+              />
             </Field>
-
-            <AnimatePresence>
-              {countryOpen && (
-                <motion.div
-                  initial={{ opacity: 0, y: -8, scale: 0.97 }}
-                  animate={{ opacity: 1, y: 0, scale: 1 }}
-                  exit={{ opacity: 0, y: -8, scale: 0.97 }}
-                  transition={{ duration: 0.16 }}
-                  className="absolute z-50 mt-2 w-full bg-white border border-gray-200 rounded-2xl shadow-2xl overflow-hidden"
-                >
-                  <div className="p-3 border-b border-gray-100">
-                    <input
-                      type="text" autoFocus placeholder="Search country…"
-                      value={countrySearch} onChange={(e) => setCountrySearch(e.target.value)}
-                      className="w-full px-3 py-2 border border-gray-200 rounded-xl text-[1.4rem] outline-none focus:border-main-orange"
-                    />
-                  </div>
-                  <ul className="max-h-52 overflow-y-auto noScroll">
-                    {filteredCountries.length === 0
-                      ? <li className="px-4 py-3 text-gray-400 text-[1.4rem]">No results</li>
-                      : filteredCountries.map((c) => (
-                        <li key={c.code}>
-                          <button
-                            type="button"
-                            onClick={() => { setSelectedCountry(c); setCountryOpen(false); setCountrySearch("") }}
-                            className={`w-full text-left px-4 py-3 text-[1.4rem] flex items-center gap-3 hover:bg-main-orange/5 hover:text-main-orange transition-colors duration-150 ${
-                              selectedCountry?.code === c.code ? "bg-main-orange/5 text-main-orange font-semibold" : "text-gray-700"
-                            }`}
-                          >
-                            <span className="text-xl">{c.flag}</span> {c.name}
-                          </button>
-                        </li>
-                      ))
-                    }
-                  </ul>
-                </motion.div>
-              )}
-            </AnimatePresence>
+            <Field label="Email" icon={FaEnvelope} error={errors.email?.message}>
+              <input
+                {...register("email", {
+                  required: "Required",
+                  validate: (v) => isValidEmail(v) || "Invalid email",
+                })}
+                type="email" placeholder="you@email.com"
+                className="w-full px-4 py-4 bg-transparent text-[1.45rem] text-gray-800 placeholder:text-slate-300 focus:outline-none"
+              />
+            </Field>
           </div>
 
-          <Field label="Company" icon={FaBuilding}>
-            <input
-              {...register("company")}
-              type="text" placeholder="Optional"
-              className="w-full px-4 py-3.5 bg-transparent text-[1.4rem] text-gray-800 placeholder:text-gray-300 focus:outline-none"
+          {/* country + company */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div id="country-picker" className="relative">
+              <Field label="Country" icon={FaGlobe}>
+                <input type="hidden" {...register("country")} value={selectedCountry?.name ?? ""} />
+                <button
+                  type="button" onClick={() => setCountryOpen((o) => !o)}
+                  className="w-full text-left flex items-center justify-between gap-2 px-4 py-4 text-[1.45rem] text-gray-800 focus:outline-none"
+                >
+                  {selectedCountry
+                    ? <span className="truncate">{selectedCountry.flag} {selectedCountry.name}</span>
+                    : <span className="text-slate-300">Select country</span>
+                  }
+                  <svg className={`w-4 h-4 text-slate-400 flex-shrink-0 transition-transform duration-200 ${countryOpen ? "rotate-180" : ""}`}
+                    fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                  </svg>
+                </button>
+              </Field>
+
+              <AnimatePresence>
+                {countryOpen && (
+                  <motion.div
+                    initial={{ opacity: 0, y: -8, scale: 0.97 }}
+                    animate={{ opacity: 1, y: 0, scale: 1 }}
+                    exit={{ opacity: 0, y: -8, scale: 0.97 }}
+                    transition={{ duration: 0.16 }}
+                    className="absolute z-50 mt-2 w-full bg-white border border-slate-200 rounded-2xl shadow-2xl overflow-hidden"
+                  >
+                    <div className="p-3 border-b border-slate-100">
+                      <input
+                        type="text" autoFocus placeholder="Search country…"
+                        value={countrySearch} onChange={(e) => setCountrySearch(e.target.value)}
+                        className="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl text-[1.4rem] outline-none focus:border-[#56c8e8]"
+                      />
+                    </div>
+                    <ul className="max-h-52 overflow-y-auto noScroll">
+                      {filteredCountries.length === 0
+                        ? <li className="px-4 py-3 text-slate-400 text-[1.4rem]">No results</li>
+                        : filteredCountries.map((c) => (
+                          <li key={c.code}>
+                            <button
+                              type="button"
+                              onClick={() => { setSelectedCountry(c); setCountryOpen(false); setCountrySearch("") }}
+                              className={`w-full text-left px-4 py-3 text-[1.4rem] flex items-center gap-3 hover:bg-[#56c8e8]/10 hover:text-[#168aaa] transition-colors duration-150 ${
+                                selectedCountry?.code === c.code ? "bg-[#56c8e8]/10 text-[#168aaa] font-semibold" : "text-gray-700"
+                              }`}
+                            >
+                              <span className="text-xl">{c.flag}</span> {c.name}
+                            </button>
+                          </li>
+                        ))
+                      }
+                    </ul>
+                  </motion.div>
+                )}
+              </AnimatePresence>
+            </div>
+
+            <Field label="Company" icon={FaBuilding}>
+              <input
+                {...register("company")}
+                type="text" placeholder="Optional"
+                className="w-full px-4 py-4 bg-transparent text-[1.45rem] text-gray-800 placeholder:text-slate-300 focus:outline-none"
+              />
+            </Field>
+          </div>
+
+          {/* notes */}
+          <Field label="Notes" icon={FaCommentDots}>
+            <textarea
+              {...register("notes")}
+              placeholder="What would you like to discuss?"
+              rows={4}
+              className="w-full px-4 py-4 bg-transparent text-[1.45rem] text-gray-800 placeholder:text-slate-300 focus:outline-none resize-none"
             />
           </Field>
+
+          {/* submit */}
+          <button
+            type="submit" disabled={loading}
+            onClick={handleSubmit(onSubmit)}
+            className="group relative w-full flex items-center justify-center gap-4 py-5 bg-main-orange text-white text-[1.5rem] font-bold uppercase tracking-[0.12em] rounded-2xl shadow-[0_10px_24px_rgba(86,200,232,0.24)] overflow-hidden hover:brightness-105 active:scale-[0.98] transition-all duration-200 disabled:opacity-60 disabled:scale-100"
+          >
+            <span className="absolute inset-0 -translate-x-full group-hover:translate-x-full bg-gradient-to-r from-transparent via-white/20 to-transparent transition-transform duration-700 pointer-events-none" />
+            {loading
+              ? <><span className="w-5 h-5 border-2 border-white/40 border-t-white rounded-full animate-spin" /> Booking…</>
+              : <><FaPaperPlane /> Confirm Booking</>
+            }
+          </button>
         </div>
-
-        {/* notes */}
-        <Field label="Notes" icon={FaCommentDots}>
-          <textarea
-            {...register("notes")}
-            placeholder="What would you like to discuss?"
-            rows={4}
-            className="w-full px-4 py-3.5 bg-transparent text-[1.4rem] text-gray-800 placeholder:text-gray-300 focus:outline-none resize-none"
-          />
-        </Field>
-
-        {/* submit */}
-        <button
-          type="submit" disabled={loading}
-          onClick={handleSubmit(onSubmit)}
-          className="group relative w-full flex items-center justify-center gap-4 py-5 bg-main-orange text-white text-[1.5rem] font-bold uppercase tracking-wide rounded-xl overflow-hidden hover:opacity-90 active:scale-[0.98] transition-all duration-200 disabled:opacity-60 disabled:scale-100"
-        >
-          <span className="absolute inset-0 -translate-x-full group-hover:translate-x-full bg-gradient-to-r from-transparent via-main-orange/15 to-transparent transition-transform duration-700 pointer-events-none" />
-          {loading
-            ? <><span className="w-5 h-5 border-2 border-white/40 border-t-white rounded-full animate-spin" /> Booking…</>
-            : <><FaPaperPlane /> Confirm Booking</>
-          }
-        </button>
       </motion.div>
     </div>
   )

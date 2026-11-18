@@ -16,19 +16,21 @@ const PUBLIC_KEY  = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY  ?? ""
 
 const isValidEmail = (e: string) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(e)
 
-// Clean floating-label input
+// Modern card field
 function Field({ label, icon: Icon, error, children }: {
   label: string; icon: React.ElementType; error?: string; children: React.ReactNode
 }) {
   return (
     <div className="group">
-      <label className="flex items-center gap-2 text-[1.1rem] font-bold text-slate-400 uppercase tracking-[0.14em] mb-2">
-        <Icon className="text-main-orange text-[1.3rem]" />
+      <label className="flex items-center gap-2 text-[1.15rem] font-bold text-slate-600 uppercase tracking-[0.14em] mb-2.5">
+        <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-main-orange/10">
+          <Icon className="text-main-orange text-[1.35rem]" />
+        </span>
         {label}
       </label>
-      <div className="rounded-xl border border-gray-200 bg-white overflow-hidden
-                      focus-within:border-main-orange focus-within:shadow-[0_0_0_3px_rgba(86,200,232,0.12)]
-                      transition-all duration-200">
+      <div className="rounded-2xl border border-slate-200 bg-slate-50/70 shadow-[0_4px_18px_rgba(15,23,42,0.04)]
+                      focus-within:border-[#56c8e8] focus-within:bg-white focus-within:shadow-[0_0_0_4px_rgba(86,200,232,0.12)]
+                      transition-all duration-200 overflow-hidden">
         {children}
       </div>
       {error && <p className="text-red-400 text-[1.2rem] mt-2 flex items-center gap-1.5">
@@ -117,28 +119,36 @@ export default function ContactForm() {
       </motion.div>
 
       {/* ── RIGHT: form ── */}
-      <div className="flex flex-col justify-center px-10 py-10 bg-white overflow-y-auto myScroll">
-        <form onSubmit={handleSubmit(onSubmit)} noValidate className="space-y-6">
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+      <motion.div
+        initial={{ opacity: 0 }} animate={{ opacity: 1 }}
+        transition={{ duration: 0.4, delay: 0.08 }}
+        className="flex flex-col justify-center px-8 py-8 bg-slate-50 overflow-y-auto myScroll"
+      >
+        <form
+          onSubmit={handleSubmit(onSubmit)}
+          noValidate
+          className="mx-auto w-full max-w-[52rem] rounded-[2rem] border border-slate-200/80 bg-white p-7 shadow-[0_18px_50px_rgba(15,23,42,0.08)] space-y-5"
+        >
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <motion.div {...s(0)}>
               <Field label="Name" icon={FaUser} error={errors.fullName?.message}>
                 <input
-                  {...register("fullName", { required: "Full name is required" })}
-                  type="text" placeholder="Your full name"
-                  className="w-full px-4 py-4 bg-transparent text-[1.5rem] text-gray-800 placeholder:text-gray-300 focus:outline-none"
+                  {...register("fullName", { required: "Required" })}
+                  type="text" placeholder="Full name"
+                  className="w-full px-4 py-4 bg-transparent text-[1.45rem] text-gray-800 placeholder:text-slate-300 focus:outline-none"
                 />
               </Field>
             </motion.div>
+
             <motion.div {...s(1)}>
               <Field label="Email" icon={FaEnvelope} error={errors.email?.message}>
                 <input
                   {...register("email", {
-                    required: "Email is required",
+                    required: "Required",
                     validate: (v) => isValidEmail(v) || "Invalid email",
                   })}
-                  type="email" placeholder="your@email.com"
-                  className="w-full px-4 py-4 bg-transparent text-[1.5rem] text-gray-800 placeholder:text-gray-300 focus:outline-none"
+                  type="email" placeholder="you@email.com"
+                  className="w-full px-4 py-4 bg-transparent text-[1.45rem] text-gray-800 placeholder:text-slate-300 focus:outline-none"
                 />
               </Field>
             </motion.div>
@@ -147,10 +157,10 @@ export default function ContactForm() {
           <motion.div {...s(2)}>
             <Field label="Message" icon={FaCommentDots} error={errors.message?.message}>
               <textarea
-                {...register("message", { required: "Message is required" })}
+                {...register("message", { required: "Required" })}
                 placeholder="Tell me about your project or idea…"
-                rows={6}
-                className="w-full px-4 py-4 bg-transparent text-[1.5rem] text-gray-800 placeholder:text-gray-300 focus:outline-none resize-none"
+                rows={5}
+                className="w-full px-4 py-4 bg-transparent text-[1.45rem] text-gray-800 placeholder:text-slate-300 focus:outline-none resize-none"
               />
             </Field>
           </motion.div>
@@ -158,17 +168,17 @@ export default function ContactForm() {
           <motion.div {...s(3)}>
             <button
               type="submit" disabled={loading}
-              className="group relative flex items-center gap-4 px-10 py-5 bg-main-orange text-white text-[1.5rem] font-bold uppercase tracking-wide rounded-xl overflow-hidden hover:opacity-90 active:scale-[0.98] transition-all duration-200 disabled:opacity-60"
+              className="group relative w-full flex items-center justify-center gap-4 py-5 bg-main-orange text-white text-[1.5rem] font-bold uppercase tracking-[0.12em] rounded-2xl shadow-[0_10px_24px_rgba(86,200,232,0.24)] overflow-hidden hover:brightness-105 active:scale-[0.98] transition-all duration-200 disabled:opacity-60 disabled:scale-100"
             >
-              <span className="absolute inset-0 -translate-x-full group-hover:translate-x-full bg-gradient-to-r from-transparent via-main-orange/15 to-transparent transition-transform duration-700 pointer-events-none" />
+              <span className="absolute inset-0 -translate-x-full group-hover:translate-x-full bg-gradient-to-r from-transparent via-white/20 to-transparent transition-transform duration-700 pointer-events-none" />
               {loading
                 ? <><span className="w-5 h-5 border-2 border-white/40 border-t-white rounded-full animate-spin" /> Sending…</>
-                : <> Send Message <AiOutlineSwapRight className="text-[2rem]" /></>
+                : <>Send Message <AiOutlineSwapRight className="text-[2rem]" /></>
               }
             </button>
           </motion.div>
         </form>
-      </div>
+      </motion.div>
     </div>
   )
 }
