@@ -1,4 +1,4 @@
-import { AiFillGithub } from "react-icons/ai"
+import { AiFillGithub, AiFillLinkedin } from "react-icons/ai"
 import { BsFillCloudArrowDownFill } from "react-icons/bs"
 import { MdLocationOn } from "react-icons/md"
 import { ProfileData } from "../types"
@@ -153,6 +153,11 @@ export default function ProfileCard({ profileData }: Props) {
             name="my github"
             Icon={AiFillGithub}
             url="https://github.com/SmartJose"
+          />
+          <MyLink
+            name="my linkedin"
+            Icon={AiFillLinkedin}
+            url="https://www.linkedin.com/in/omar-hassan-39931b44b/"
           />
         </div>
       </div>
