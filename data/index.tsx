@@ -211,8 +211,8 @@ export const educationData = [
     id: "edu1",
     badge: "04/2014 – 03/2018",
     title: "Bachelor of Science in Computer Science",
-    subTitle: "International Professional University of Technology — Giza, AI Jizah, Egypt",
-    desc: "Specialization in Artificial Intelligence. Studied machine learning, algorithms, data structures, distributed systems, and software engineering principles.",
+    subTitle: "The American University in Cairo (AUC) —  Cairo, Egypt",
+    desc: "",
     experience: false,
   },
 ]
