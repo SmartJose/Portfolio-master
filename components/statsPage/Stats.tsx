@@ -28,7 +28,7 @@ export default function Stats() {
         <Title name="achievements" />
 
         {/* 3-column stat cards grid */}
-        <ul className="grid grid-cols-1 sm:grid-cols-3 customLine before:bottom-0 relative borderLeft">
+        <ul className="grid grid-cols-1 sm:grid-cols-2 customLine before:bottom-0 relative borderLeft">
           {statCards.map((stat, idx) => (
             <StatCard
               key={stat.id}

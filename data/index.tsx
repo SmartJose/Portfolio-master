@@ -41,13 +41,13 @@ export const socialMedia = [
     id: 1,
     Icon: AiFillGithub,
     label: "GitHub",
-    mediaUrl: "https://github.com/Heaven-TS",
+    mediaUrl: "https://github.com/SmartJose",
   },
   {
     id: 3,
     Icon: AiOutlineMail,
     label: "Email",
-    mediaUrl: "mailto:k.legend.dev@gmail.com",
+    mediaUrl: "mailto:omarhassanisme@gmail.com",
   },
 ]
 
@@ -887,7 +887,7 @@ export const statCards: StatItem[] = [
   {
     id: "s1",
     label: "Years of Experience",
-    value: 8,
+    value: 6,
     suffix: "+",
     description: "Building production software across AI, full-stack, and cloud engineering",
     Icon: BsAwardFill,
@@ -895,21 +895,13 @@ export const statCards: StatItem[] = [
   {
     id: "s2",
     label: "Projects Shipped",
-    value: 40,
+    value: 20,
     suffix: "+",
     description: "End-to-end products delivered across startups and enterprise clients",
     Icon: BsCodeSlash,
   },
   {
     id: "s3",
-    label: "AI Models Deployed",
-    value: 15,
-    suffix: "+",
-    description: "LLM, RAG, and ML systems running in production environments",
-    Icon: BsCpu,
-  },
-  {
-    id: "s4",
     label: "Cloud Cost Saved",
     value: 40,
     suffix: "%",
@@ -917,20 +909,12 @@ export const statCards: StatItem[] = [
     Icon: BsCloudFill,
   },
   {
-    id: "s5",
+    id: "s4",
     label: "API Latency Reduced",
     value: 40,
     suffix: "%",
     description: "Inference and API latency improvement on optimized LLM services",
     Icon: BsGraphUp,
-  },
-  {
-    id: "s6",
-    label: "Engineers Led",
-    value: 8,
-    suffix: "+",
-    description: "Cross-functional engineering team at IntelliAI Solutions",
-    Icon: BsPeopleFill,
   },
 ]
 

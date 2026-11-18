@@ -17,7 +17,7 @@ import BlogLb from "../components/blogPage/BlogLb"
 
 const profileData = {
   name: "Omar Hassan",
-  bio: "Senior AI & Full Stack Engineer with 8+ years of experience.",
+  bio: "AI & Full Stack Engineer with 8+ years of experience.",
   ownersPhoto: {
     url: "/images/avatar.png",
   },
