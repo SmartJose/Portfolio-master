@@ -3,7 +3,7 @@ import { FaBriefcase } from "react-icons/fa"
 import { motion } from "framer-motion"
 
 const infoItems = [
-  { Icon: MdLocationOn, field: "Address",   value: "Giza, AI Jizah, Egypt"           },
+  { Icon: MdLocationOn, field: "Address",   value: "Giza, Al Jizah, Egypt"           },
   { Icon: MdEmail,      field: "Email",     value: "omarhassanisme@gmail.com" },
   { Icon: MdPhone,      field: "Phone",     value: "+20 122 465 9024"        },
   { Icon: FaBriefcase,  field: "Open to work", value: "Available",  highlight: true },
@@ -58,7 +58,7 @@ export default function Location() {
               Let's <span className="text-white/90 underline underline-offset-4 decoration-white/40">Connect.</span>
             </h2>
             <p className="text-[1.4rem] text-white/75 leading-[1.75]">
-              Based in Giza, AI Jizah, Egypt.<br />
+              Based in Giza, Al Jizah, Egypt.<br />
               Open to remote &amp; on-site worldwide.
             </p>
           </motion.div>
@@ -94,7 +94,7 @@ export default function Location() {
         className="relative overflow-hidden"
       >
         <iframe
-          src="https://www.google.com/maps?q=Giza,+AI+Jizah,+Egypt&output=embed"
+          src="https://www.google.com/maps?q=Giza,+Al+Jizah,+Egypt&output=embed"
           style={{ border: 0 } as React.CSSProperties}
           allowFullScreen={false} loading="lazy" referrerPolicy="no-referrer-when-downgrade"
           className="w-full h-full min-h-[38rem]"
