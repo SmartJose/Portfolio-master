@@ -16,7 +16,7 @@ import WorkLb from "../components/worksPage/WorkLb"
 import BlogLb from "../components/blogPage/BlogLb"
 
 const profileData = {
-  name: "Takumi Shimizu",
+  name: "Omar Hassan",
   bio: "Senior AI & Full Stack Engineer with 8+ years of experience.",
   ownersPhoto: {
     url: "/images/avatar.png",
@@ -54,10 +54,10 @@ const Home: NextPage = () => {
   return (
     <main className="relative flex items-center justify-center min-h-screen home">
       <Head>
-        <title>Takumi Shimizu — Portfolio</title>
+        <title>Omar Hassan — Portfolio</title>
         <meta
           name="description"
-          content="Senior AI & Full Stack Engineer — Takumi Shimizu"
+          content="AI & Full Stack Engineer — Omar Hassan"
         />
         <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
         <link rel="manifest" href="/site.webmanifest" />
