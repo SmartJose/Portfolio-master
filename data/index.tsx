@@ -109,7 +109,7 @@ export const testimonials: TestimonialData[] = [
   {
     id: 1,
     quote:
-      "Takumi delivered an outstanding AI pipeline that dramatically improved our knowledge retrieval accuracy. His expertise in LangChain and RAG is exceptional.",
+      "Omar delivered an outstanding AI pipeline that dramatically improved our knowledge retrieval accuracy. His expertise in LangChain and RAG is exceptional.",
     userName: "Alex Martinez",
     userProfession: "CTO at IntelliAI Solutions",
     userImage: {
@@ -119,7 +119,7 @@ export const testimonials: TestimonialData[] = [
   {
     id: 2,
     quote:
-      "Working with Takumi on our SaaS platform was a game changer. He brought deep full-stack expertise and a strong eye for scalable architecture.",
+      "Working with Omar on our SaaS platform was a game changer. He brought deep full-stack expertise and a strong eye for scalable architecture.",
     userName: "Sarah Chen",
     userProfession: "Product Manager at Zenith Review Inc",
     userImage: {
@@ -129,7 +129,7 @@ export const testimonials: TestimonialData[] = [
   {
     id: 3,
     quote:
-      "Takumi reduced our deployment time from 3 hours to 25 minutes with his CI/CD improvements. Highly recommend him for any DevOps or full-stack work.",
+      "Omar reduced our deployment time from 3 hours to 25 minutes with his CI/CD improvements. Highly recommend him for any DevOps or full-stack work.",
     userName: "James Wilson",
     userProfession: "Engineering Lead at Jupiter Enterprises",
     userImage: {
@@ -149,7 +149,7 @@ export const testimonials: TestimonialData[] = [
   {
     id: 5,
     quote:
-      "Takumi's ability to explain complex technical concepts in simple terms made collaboration seamless. His code quality and documentation are top-notch.",
+      "Omar's ability to explain complex technical concepts in simple terms made collaboration seamless. His code quality and documentation are top-notch.",
     userName: "Michael Thompson",
     userProfession: "Senior Developer at CloudSync Systems",
     userImage: {
@@ -159,7 +159,7 @@ export const testimonials: TestimonialData[] = [
   {
     id: 6,
     quote:
-      "The API architecture Takumi designed for our platform is elegant and performant. He anticipated scaling challenges before they became problems.",
+      "The API architecture Omar designed for our platform is elegant and performant. He anticipated scaling challenges before they became problems.",
     userName: "Priya Sharma",
     userProfession: "Tech Lead at DataHub Solutions",
     userImage: {
@@ -173,7 +173,7 @@ export const quoteData: TestimonialData = {
   quote:
     "The best way to predict the future is to invent it. Code is not just instructions for machines — it is the language through which we shape tomorrow.",
   userName: "Omar Hassan",
-  userProfession: "Senior AI & Full Stack Engineer",
+  userProfession: "AI & Full Stack Engineer",
   userImage: {
     url: "/images/avatar.png",
   },
