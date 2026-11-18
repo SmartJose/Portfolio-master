@@ -32,7 +32,7 @@ const profileData = {
       url: "https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=800&q=80",
     },
   ],
-  cv: "/Takumi_Shimizu.pdf",
+  cv: "/Omar Hassan.pdf",
 }
 
 const exitClipPaths = [
