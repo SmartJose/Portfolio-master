@@ -44,6 +44,12 @@ export const socialMedia = [
     mediaUrl: "https://github.com/SmartJose",
   },
   {
+    id: 2,
+    Icon: AiFillLinkedin,
+    label: "LinkedIn",
+    mediaUrl: "https://www.linkedin.com/in/omar-hassan-39931b44b/",
+  },
+  {
     id: 3,
     Icon: AiOutlineMail,
     label: "Email",
