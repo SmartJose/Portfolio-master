@@ -289,7 +289,7 @@ export const worksData: WorkData[] = [
     description:
       "AI-powered photo generation platform with intelligent image creation, style transfer, and automated creative workflows.",
     liveUrl: "https://mindforgee.vercel.app/",
-    githubUrl: "https://github.com/Heaven-TS/AI--Photo-Generation-Platform",
+    githubUrl: "https://github.com/SmartJose/AI--Photo-Generation-Platform",
     images: [
       { url: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=800&q=80" },
     ],
@@ -315,7 +315,7 @@ export const worksData: WorkData[] = [
     description:
       "Full-featured online course platform with video lessons, Stripe payments, progress tracking, and instructor dashboards. Built with Next.js 15 and Drizzle ORM.",
     liveUrl: "https://coode-platform.vercel.app",
-    githubUrl: "https://github.com/Heaven-TS/Full-stack-Online-Course-Platform",
+    githubUrl: "https://github.com/SmartJose/Full-stack-Online-Course-Platform",
     images: [
       { url: "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=800&q=80" },
     ],
@@ -328,7 +328,7 @@ export const worksData: WorkData[] = [
     description:
       "Comprehensive full-stack e-commerce platform inspired by Amazon. Features include product catalog, shopping cart, user authentication, order management, and payment processing.",
     liveUrl: "https://amazoning.onrender.com/",
-    githubUrl: "https://github.com/Heaven-TS/Full-stack-Ecommerce",
+    githubUrl: "https://github.com/SmartJose/Full-stack-Ecommerce",
     images: [
       { url: "https://images.unsplash.com/photo-1563986768609-322da13575f3?w=800&q=80" },
     ],
