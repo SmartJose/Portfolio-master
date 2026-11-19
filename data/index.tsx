@@ -27,13 +27,13 @@ import Stats from "../components/statsPage/Stats"
 import AdminDashboard from "../components/adminPage/AdminDashboard"
 
 export const menus: MenuData[] = [
-  { id: 1, label: "about",   Icon: AiOutlineUser,  Component: About          },
-  { id: 2, label: "resume",  Icon: FiFileText,     Component: Resume         },
-  { id: 3, label: "works",   Icon: FiCode,         Component: Works          },
-  { id: 4, label: "blog",    Icon: FaBlog,         Component: Blog           },
-  { id: 5, label: "stats",   Icon: FaChartBar,     Component: Stats          },
-  { id: 6, label: "contact", Icon: AiOutlineMail,  Component: Contact        },
-  { id: 7, label: "admin",   Icon: FaUserShield,   Component: AdminDashboard },
+  { id: 1, label: "about", Icon: AiOutlineUser, Component: About },
+  { id: 2, label: "resume", Icon: FiFileText, Component: Resume },
+  { id: 3, label: "works", Icon: FiCode, Component: Works },
+  { id: 4, label: "blog", Icon: FaBlog, Component: Blog },
+  { id: 5, label: "stats", Icon: FaChartBar, Component: Stats },
+  { id: 6, label: "contact", Icon: AiOutlineMail, Component: Contact },
+  { id: 7, label: "admin", Icon: FaUserShield, Component: AdminDashboard },
 ]
 
 export const socialMedia = [
@@ -215,7 +215,7 @@ export const experienceData = [
 export const educationData = [
   {
     id: "edu1",
-    badge: "04/2014 – 03/2018",
+    badge: "09/2016 – 08/2020",
     title: "Bachelor of Science in Computer Science",
     subTitle: "The American University in Cairo (AUC) —  Cairo, Egypt",
     desc: "",
@@ -257,18 +257,17 @@ export const skillsData = {
 }
 
 export const worksData: WorkData[] = [
-  // ── AI Projects ────────────────────────────────────────────────────────────
   {
     id: "w1",
-    title: "MatrixAI — AI SaaS Platform",
+    title: "ACE AI — LangChain Study Assistant",
     description:
-      "A production-grade AI SaaS platform with multi-model support, chat interface, and automated workflow orchestration. Built with Next.js and OpenAI APIs.",
-    liveUrl: "https://jj-nextgen-ai.vercel.app/",
-    githubUrl: "https://github.com/Heaven-TS/AI-Sass-platform",
+      "Full-stack AI study assistant built with Next.js, FastAPI, LangChain, and Pinecone. Features document upload, chat, quiz and notes generation, and web search agent.",
+    liveUrl: "https://takumi-ai-next-fast-api.vercel.app/",
+    githubUrl: "https://github.com/SmartJose/AI-Next-FastAPI",
     images: [
-      { url: "https://images.unsplash.com/photo-1639762681485-074b7f938ba0?w=800&q=80" },
+      { url: "https://images.unsplash.com/photo-1546410531-bb4caa6b424d?w=800&q=80" },
     ],
-    technologies: ["Next.js", "OpenAI API", "TypeScript", "Tailwind CSS"],
+    technologies: ["Next.js", "FastAPI", "LangChain", "Pinecone", "OpenAI API"],
     workTabs: [{ tab: "All" }, { tab: "AI" }],
   },
   {
@@ -277,7 +276,7 @@ export const worksData: WorkData[] = [
     description:
       "AI-powered productivity SaaS platform featuring intelligent note-taking, knowledge management, and automated content generation workflows.",
     liveUrl: "https://takumi-ai-sass-django-project.vercel.app/",
-    githubUrl: "https://github.com/Heaven-TS/AI-Sass-Django-project",
+    githubUrl: "https://github.com/SmartJose/AI-Sass-Django-project",
     images: [
       { url: "https://images.unsplash.com/photo-1593508512255-86ab42a8e620?w=800&q=80" },
     ],
@@ -286,103 +285,11 @@ export const worksData: WorkData[] = [
   },
   {
     id: "w3",
-    title: "Lumore — AI UI/UX E-Commerce",
-    description:
-      "Modern AI-enhanced e-commerce experience with intelligent product recommendations, dynamic UI, and seamless checkout flow.",
-    liveUrl: "https://takumi-full-stack-ecommerce-lumore.vercel.app/",
-    githubUrl: "https://github.com/Heaven-TS/Full-stack-Ecommerce-Lumore",
-    images: [
-      { url: "https://api.microlink.io/?url=https://lumore.vercel.app/&screenshot=true&meta=false&embed=screenshot.url" },
-    ],
-    technologies: ["React", "Next.js", "Tailwind CSS", "TypeScript"],
-    workTabs: [{ tab: "All" }, { tab: "AI" }],
-  },
-  {
-    id: "w4",
-    title: "Document Chat — RAG System",
-    description:
-      "Retrieval-Augmented Generation system for document intelligence. Upload any document and chat with it using natural language powered by vector search.",
-    liveUrl: "https://document-chat-system.vercel.app/",
-    githubUrl: "https://github.com/Heaven-TS/AI-document-chat-system",
-    images: [
-      { url: "https://images.unsplash.com/photo-1555421689-d68471e189f2?w=800&q=80" },
-    ],
-    technologies: ["Python", "LangChain", "FastAPI", "Pinecone", "OpenAI API"],
-    workTabs: [{ tab: "All" }, { tab: "AI" }],
-  },
-  {
-    id: "w5",
-    title: "ACE AI — LangChain Study Assistant",
-    description:
-      "Full-stack AI study assistant built with Next.js, FastAPI, LangChain, and Pinecone. Features document upload, chat, quiz and notes generation, and web search agent.",
-    liveUrl: "https://takumi-ai-next-fast-api.vercel.app/",
-    githubUrl: "https://github.com/Heaven-TS/AI-Next-FastAPI",
-    images: [
-      { url: "https://images.unsplash.com/photo-1546410531-bb4caa6b424d?w=800&q=80" },
-    ],
-    technologies: ["Next.js", "FastAPI", "LangChain", "Pinecone", "OpenAI API"],
-    workTabs: [{ tab: "All" }, { tab: "AI" }],
-  },
-  {
-    id: "w6",
-    title: "Video2Text — FastAPI AI Transcription",
-    description:
-      "AI-powered video-to-text transcription service built with FastAPI. Automatically extracts and transcribes audio from video files with high accuracy.",
-    liveUrl: "https://e-commerce.partners/video-to-text/?utm_campaign=video2text.de&utm_medium=rdhr",
-    githubUrl: "https://github.com/Heaven-TS/AI-video-to-text",
-    images: [
-      { url: "https://images.unsplash.com/photo-1492619375914-88005aa9e8fb?w=800&q=80" },
-    ],
-    technologies: ["Python", "FastAPI", "Whisper", "Docker"],
-    workTabs: [{ tab: "All" }, { tab: "AI" }],
-  },
-  // ── Full Stack Projects ────────────────────────────────────────────────────
-  {
-    id: "w7",
-    title: "Wedding Site — Full Stack",
-    description:
-      "Elegant wedding website with RSVP management, event details, photo gallery, and guest coordination features. Clean modern design with smooth animations.",
-    liveUrl: "https://takumi-wedding-site.vercel.app/",
-    githubUrl: "https://github.com/Heaven-TS/Wedding-site",
-    images: [
-      { url: "https://api.microlink.io/?url=https://site-weding.netlify.app/&screenshot=true&meta=false&embed=screenshot.url" },
-    ],
-    technologies: ["React", "Node.js", "CSS", "JavaScript"],
-    workTabs: [{ tab: "All" }, { tab: "Full-Stack" }],
-  },
-  {
-    id: "w8",
-    title: "Modern E-Commerce Platform",
-    description:
-      "Fully responsive and modern e-commerce website with product listings, cart, checkout, and order management. Built for performance and scalability.",
-    liveUrl: "https://takumi-full-stack-modern-ecommerce.vercel.app/",
-    githubUrl: "https://github.com/Heaven-TS/Full-stack-Modern-Ecommerce",
-    images: [
-      { url: "https://api.microlink.io/?url=https://modern-commerce-site.netlify.app/&screenshot=true&meta=false&embed=screenshot.url" },
-    ],
-    technologies: ["React", "Node.js", "MongoDB", "Stripe"],
-    workTabs: [{ tab: "All" }, { tab: "Full-Stack" }],
-  },
-  {
-    id: "w9",
-    title: "Weflix — Free Movie Streaming",
-    description:
-      "Movie streaming platform with real-time search, genre filtering, watchlists, and a clean cinema-style UI. Integrates with external media APIs.",
-    liveUrl: "https://www.weflix.app/",
-    githubUrl: "https://github.com/Heaven-TS/Full-stack-Free-Movie-Streaming-Website",
-    images: [
-      { url: "https://images.unsplash.com/photo-1478720568477-152d9b164e26?w=800&q=80" },
-    ],
-    technologies: ["React", "REST API", "Tailwind CSS", "JavaScript"],
-    workTabs: [{ tab: "All" }, { tab: "Full-Stack" }],
-  },
-  {
-    id: "w10",
     title: "MindForge — AI Photo Generation Platform",
     description:
       "AI-powered photo generation platform with intelligent image creation, style transfer, and automated creative workflows.",
     liveUrl: "https://mindforgee.vercel.app/",
-    githubUrl: "https://github.com/Heaven-TS/AI--Photo-Generation-Platform",
+    githubUrl: "https://github.com/SmartJose/AI--Photo-Generation-Platform",
     images: [
       { url: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=800&q=80" },
     ],
@@ -390,32 +297,217 @@ export const worksData: WorkData[] = [
     workTabs: [{ tab: "All" }, { tab: "AI" }],
   },
   {
+    id: "w9",
+    title: "Weflix — Free Movie Streaming",
+    description:
+      "Movie streaming platform with real-time search, genre filtering, watchlists, and a clean cinema-style UI. Integrates with external media APIs.",
+    liveUrl: "https://www.weflix.app/",
+    githubUrl: "https://github.com/SmartJose/Full-stack-Free-Movie-Streaming-Website",
+    images: [
+      { url: "https://images.unsplash.com/photo-1478720568477-152d9b164e26?w=800&q=80" },
+    ],
+    technologies: ["React", "REST API", "Tailwind CSS", "JavaScript"],
+    workTabs: [{ tab: "All" }, { tab: "Full-Stack" }],
+  },
+  {
     id: "w11",
     title: "Coode — Online Course Platform",
     description:
       "Full-featured online course platform with video lessons, Stripe payments, progress tracking, and instructor dashboards. Built with Next.js 15 and Drizzle ORM.",
     liveUrl: "https://coode-platform.vercel.app",
-    githubUrl: "https://github.com/Heaven-TS/Full-stack-Online-Course-Platform",
+    githubUrl: "https://github.com/SmartJose/Full-stack-Online-Course-Platform",
     images: [
       { url: "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=800&q=80" },
     ],
     technologies: ["Next.js 15", "React", "Stripe", "Drizzle ORM", "PostgreSQL"],
     workTabs: [{ tab: "All" }, { tab: "Full-Stack" }],
   },
-  // ── Web Design Projects ────────────────────────────────────────────────────
   {
-    id: "w1",
-    title: "Gelato Pique — Lifestyle Brand",
+    id: "w12",
+    title: "Amazoning — Full-Stack E-Commerce",
     description:
-      "Premium lifestyle and loungewear brand website. Clean, minimal design with seasonal collections, lookbooks, and an integrated online shop experience.",
-    liveUrl: "https://gelatopique.com/",
+      "Comprehensive full-stack e-commerce platform inspired by Amazon. Features include product catalog, shopping cart, user authentication, order management, and payment processing.",
+    liveUrl: "https://amazoning.onrender.com/",
+    githubUrl: "https://github.com/SmartJose/Full-stack-Ecommerce",
+    images: [
+      { url: "https://images.unsplash.com/photo-1563986768609-322da13575f3?w=800&q=80" },
+    ],
+    technologies: ["React", "Node.js", "Express", "MongoDB", "Stripe"],
+    workTabs: [{ tab: "All" }, { tab: "Full-Stack" }],
+  },
+
+  {
+    id: "W13",
+    title: "Grainne Morton",
+    description: "An artistic jewelry website featuring editorial photography, elegant typography, and a refined product presentation.",
+    liveUrl: "https://grainnemorton.com/",
     githubUrl: "",
     images: [
-      { url: "https://api.microlink.io?url=https%3A%2F%2Fgelatopique.com%2F&screenshot=true&meta=false&embed=screenshot.url" },
+      {
+        url: "https://images.unsplash.com/photo-1611652022419-a9419f74343d?auto=format&fit=crop&w=1200&q=85"
+      }
     ],
-    technologies: ["Shopify", "Liquid", "CSS", "JavaScript"],
-    workTabs: [{ tab: "All" }, { tab: "Web Design" }],
+    technologies: ["E-commerce", "HTML", "CSS", "JavaScript"],
+    workTabs: [{ tab: "All" }, { tab: "Web Design" }]
   },
+  {
+    id: "W14",
+    title: "Acid League",
+    description: "A bold food and lifestyle brand website with vibrant colors, playful typography, and creative product storytelling.",
+    liveUrl: "https://acidleague.com/",
+    githubUrl: "",
+    images: [
+      {
+        url: "https://images.unsplash.com/photo-1472476443507-c7a5948772fc?auto=format&fit=crop&w=1200&q=85"
+      }
+    ],
+    technologies: ["E-commerce", "HTML", "CSS", "JavaScript"],
+    workTabs: [{ tab: "All" }, { tab: "Web Design" }]
+  },
+  {
+    id: "W15",
+    title: "Canyon Coffee",
+    description: "A warm and minimal coffee brand website combining lifestyle photography, simple layouts, and thoughtful branding.",
+    liveUrl: "https://canyoncoffee.co/",
+    githubUrl: "",
+    images: [
+      {
+        url: "https://images.unsplash.com/photo-1445116572660-236099ec97a0?auto=format&fit=crop&w=1200&q=85"
+      }
+    ],
+    technologies: ["E-commerce", "HTML", "CSS", "JavaScript"],
+    workTabs: [{ tab: "All" }, { tab: "Web Design" }]
+  },
+  {
+    id: "W16",
+    title: "Lore Perfumery",
+    description: "A fragrance website with an atmospheric visual identity, cinematic imagery, and sophisticated product storytelling.",
+    liveUrl: "https://loreperfumery.com/",
+    githubUrl: "",
+    images: [
+      {
+        url: "https://images.unsplash.com/photo-1594035910387-fea47794261f?auto=format&fit=crop&w=1200&q=85"
+      }
+    ],
+    technologies: ["E-commerce", "HTML", "CSS", "JavaScript"],
+    workTabs: [{ tab: "All" }, { tab: "Web Design" }]
+  },
+  {
+    id: "W17",
+    title: "Klur",
+    description: "A luxury skincare website with minimalist layouts, neutral tones, and elegant product photography.",
+    liveUrl: "https://klur.co/",
+    githubUrl: "",
+    images: [
+      {
+        url: "https://images.unsplash.com/photo-1608248543803-ba4f8c70ae0b?auto=format&fit=crop&w=1200&q=85"
+      }
+    ],
+    technologies: ["E-commerce", "HTML", "CSS", "JavaScript"],
+    workTabs: [{ tab: "All" }, { tab: "Web Design" }]
+  },
+  {
+    id: "W18",
+    title: "Oakâme",
+    description: "A furniture and interior design website emphasizing natural materials, architectural photography, and modern aesthetics.",
+    liveUrl: "https://oaka.me/",
+    githubUrl: "",
+    images: [
+      {
+        url: "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1200&q=85"
+      }
+    ],
+    technologies: ["Web Design", "HTML", "CSS", "JavaScript"],
+    workTabs: [{ tab: "All" }, { tab: "Web Design" }]
+  },
+  {
+    id: "W19",
+    title: "Hardgraft",
+    description: "A premium accessories website featuring minimalist product displays, rich textures, and sophisticated visual design.",
+    liveUrl: "https://www.hardgraft.com/",
+    githubUrl: "",
+    images: [
+      {
+        url: "https://images.unsplash.com/photo-1548036328-c9fa89d128fa?auto=format&fit=crop&w=1200&q=85"
+      }
+    ],
+    technologies: ["E-commerce", "HTML", "CSS", "JavaScript"],
+    workTabs: [{ tab: "All" }, { tab: "Web Design" }]
+  },
+  {
+    id: "W20",
+    title: "Retrouvé",
+    description: "A luxury skincare website combining elegant typography, premium product photography, and a clean editorial layout.",
+    liveUrl: "https://retrouve.com/",
+    githubUrl: "",
+    images: [
+      {
+        url: "https://images.unsplash.com/photo-1556229010-6c3f2c9ca5f8?auto=format&fit=crop&w=1200&q=85"
+      }
+    ],
+    technologies: ["E-commerce", "HTML", "CSS", "JavaScript"],
+    workTabs: [{ tab: "All" }, { tab: "Web Design" }]
+  },
+  {
+    id: "W21",
+    title: "Honey Department",
+    description: "An artisanal food brand website with warm colors, creative packaging, and visually engaging product storytelling.",
+    liveUrl: "https://honeydepartment.com/",
+    githubUrl: "",
+    images: [
+      {
+        url: "https://images.unsplash.com/photo-1587049352851-8d4e89133924?auto=format&fit=crop&w=1200&q=85"
+      }
+    ],
+    technologies: ["E-commerce", "HTML", "CSS", "JavaScript"],
+    workTabs: [{ tab: "All" }, { tab: "Web Design" }]
+  },
+  {
+    id: "W22",
+    title: "Aura Estelle",
+    description: "A stationery and planner website with soft colors, beautiful product grids, and an inviting lifestyle aesthetic.",
+    liveUrl: "https://www.auraestelle.com/",
+    githubUrl: "",
+    images: [
+      {
+        url: "https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&w=1200&q=85"
+      }
+    ],
+    technologies: ["E-commerce", "HTML", "CSS", "JavaScript"],
+    workTabs: [{ tab: "All" }, { tab: "Web Design" }]
+  },
+  {
+    id: "W23",
+    title: "Paper + Cup",
+    description: "A creative stationery store featuring handcrafted aesthetics, thoughtful product presentation, and gentle visual styling.",
+    liveUrl: "https://paperandcup.com/",
+    githubUrl: "",
+    images: [
+      {
+        url: "https://images.unsplash.com/photo-1453738773917-9c3eff1db985?auto=format&fit=crop&w=1200&q=85"
+      }
+    ],
+    technologies: ["E-commerce", "HTML", "CSS", "JavaScript"],
+    workTabs: [{ tab: "All" }, { tab: "Web Design" }]
+  },
+  {
+    id: "W24",
+    title: "The Frankie Shop",
+    description: "A contemporary fashion website with editorial photography, sophisticated typography, and clean product layouts.",
+    liveUrl: "https://thefrankieshop.com/",
+    githubUrl: "",
+    images: [
+      {
+        url: "https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=1200&q=85"
+      }
+    ],
+    technologies: ["E-commerce", "HTML", "CSS", "JavaScript"],
+    workTabs: [{ tab: "All" }, { tab: "Web Design" }]
+  }
+
+
+
+
 ]
 
 export const workTabs = ["All", "AI", "Full-Stack", "Web Design"]
@@ -454,15 +546,15 @@ export const blogTabs = ["All", "AI", "Full-Stack", "Web Design"]
 export const blogPosts: BlogPost[] = [
   {
     id: "b1",
-    title: "Building MatrixAI: A Multi-Model AI SaaS Platform",
+    title: "ACE AI: Full-Stack Study Assistant with LangChain and Pinecone",
     excerpt:
-      "How I architected a production AI SaaS platform with Next.js and OpenAI APIs — covering multi-model routing, streaming responses, auth, and deployment on Vercel.",
-    content: `MatrixAI started as an experiment: what would a truly production-grade AI SaaS look like when built lean?\n\n**Multi-Model Architecture**\nRather than hardcoding GPT-4, I built a model router that selects the best model per request based on complexity, cost, and latency targets. Simple queries hit GPT-3.5-turbo; complex reasoning goes to GPT-4o. This cut costs by ~35% with no quality loss.\n\n**Streaming with Next.js App Router**\nNext.js 14's App Router + React Server Components made streaming trivial. I use the Vercel AI SDK's useChat hook on the client, with a route handler that pipes OpenAI's streaming response directly to the browser.\n\n**Auth & Multi-Tenancy**\nClerk handles auth — it's the fastest way to get social login, session management, and org-level multi-tenancy running without rolling your own. Each org gets isolated usage quotas tracked in Postgres.\n\n**Deployment**\nVercel + Postgres (Neon serverless) + Edge Functions for the streaming endpoints. Cold starts are under 200ms thanks to Edge runtime. Total infra cost for early users: under $20/month.`,
+      "Building ACE AI — a Next.js + FastAPI study assistant that combines document chat, quiz generation, note summarisation, and a web search agent in one cohesive app.",
+    content: `ACE AI combines four AI features that students actually need: document chat, quiz generation, note summarisation, and live web search. Here is how I built each one.\n\n**Document Chat with Pinecone**\nSame RAG pipeline as Document Chat (see previous post) but scoped to study materials. Each user's uploaded notes are namespaced in Pinecone so queries only search their own documents.\n\n**Quiz Generation**\nGiven a topic or uploaded doc, GPT-4o generates multiple-choice questions with distractors and explanations. I use structured output (JSON mode) and validate with Pydantic before returning to the client — no more hallucinated answer formats.\n\n**Web Search Agent**\nFor questions beyond the uploaded docs, a LangChain agent with a Tavily Search tool fetches current information. The agent decides whether to use search based on the query — it doesn't blindly call the web for every question.\n\n**Vercel AI SDK Integration**\nThe Next.js frontend uses useChat for the streaming chat UI and useCompletion for one-shot generation features (quiz, summary). Both connect to the same FastAPI backend via separate endpoints.`,
     category: "AI",
-    date: "Jul 2025",
+    date: "Mar 2025",
     readTime: "8 min read",
-    coverImage: "https://images.unsplash.com/photo-1639762681485-074b7f938ba0?w=800&q=80",
-    tags: ["Next.js", "OpenAI", "SaaS", "TypeScript"],
+    coverImage: "https://images.unsplash.com/photo-1546410531-bb4caa6b424d?w=800&q=80",
+    tags: ["LangChain", "Next.js", "FastAPI", "Pinecone"],
   },
   {
     id: "b2",
@@ -478,75 +570,15 @@ export const blogPosts: BlogPost[] = [
   },
   {
     id: "b3",
-    title: "Lumore: Designing an AI-Enhanced E-Commerce Experience",
+    title: "Teamora: Multi-Tenant ERP Architecture with Django and React",
     excerpt:
-      "How I used AI to personalise the shopping experience on Lumore — product recommendations, smart search, and dynamic UI components driven by user behaviour.",
-    content: `E-commerce personalisation used to require a data science team. With modern LLMs and embedding models, one engineer can ship a compelling personalised experience.\n\n**AI Product Recommendations**\nI embed product descriptions and user purchase history, then use cosine similarity to surface relevant products. Updated nightly via a cron job — no real-time inference needed, which keeps costs near zero.\n\n**Semantic Product Search**\nInstead of SQL LIKE queries, search uses a hybrid approach: BM25 keyword matching combined with vector similarity re-ranking. Users find what they mean, not just what they typed.\n\n**Dynamic UI with AI**\nThe hero banner and featured products sections are populated by a lightweight recommendation model that considers time-of-day, device type, and browsing history. A/B tested against static content — 18% higher click-through.\n\n**Tech Stack**\nNext.js 14 App Router for the frontend, a serverless FastAPI layer for AI inference, and Shopify as the commerce backend via GraphQL Storefront API. Hosted on Vercel with edge caching for static pages.`,
+      "Deep dive into Teamora's multi-tenant architecture — Django DRF for the API, React Redux for state, PostgreSQL row-level security for data isolation, and Redis for real-time features.",
+    content: `Multi-tenancy at the application level is one of those architectural decisions you want to get right from day one. Here is how Teamora handles it.\n\n**Tenant Isolation**\nEvery database row has a tenant_id foreign key. A custom Django middleware injects the tenant into every ORM query via a thread-local, so no query can accidentally leak data across tenants. PostgreSQL row-level security adds a database-level enforcement layer.\n\n**Django REST Framework Structure**\nViewSets with tenant-scoped querysets, serializers with nested relations, and custom permissions that check both authentication and tenant membership. API versioning via URL prefix (v1, v2) from day one.\n\n**Real-Time with Redis and Channels**\nProject status updates and notifications use Django Channels over WebSocket. Redis as the channel layer — all worker processes share the same pub/sub bus, so notifications reach users regardless of which dyno handles their WebSocket.\n\n**React Redux State**\nRedux Toolkit with RTK Query for API fetching. One slice per resource (projects, tasks, members). Optimistic updates for task status changes — the UI updates instantly while the API call happens in the background.`,
     category: "AI",
-    date: "May 2025",
-    readTime: "6 min read",
-    coverImage: "https://api.microlink.io/?url=https://lumore.vercel.app/&screenshot=true&meta=false&embed=screenshot.url",
-    tags: ["Next.js", "AI", "E-Commerce", "TypeScript"],
-  },
-  {
-    id: "b4",
-    title: "Document Chat: Building a Production RAG System from Scratch",
-    excerpt:
-      "A complete walkthrough of the Document Chat RAG system — from document ingestion and chunking to vector search, reranking, and a clean chat UI.",
-    content: `Document Chat lets users upload any PDF, Word doc, or text file and chat with it using natural language. Here is how the pipeline works end to end.\n\n**Document Ingestion**\nFiles are uploaded to S3, then processed by a FastAPI background task. I use LangChain's document loaders for format handling, then recursive character splitting with 512-token chunks and 64-token overlap.\n\n**Embedding & Storage**\nChunks are embedded with OpenAI's text-embedding-3-small and upserted to Pinecone with document metadata (filename, page number, chunk index). Namespace per user keeps data isolated.\n\n**Retrieval & Reranking**\nOn each query, I retrieve top-20 chunks by cosine similarity, then rerank with Cohere's rerank-english-v2.0 model to get the top-5. The reranker consistently outperforms pure vector similarity by a meaningful margin on precision.\n\n**Chat Interface**\nNext.js + Vercel AI SDK on the frontend. The API handler streams the LLM response token-by-token. Source citations (filename + page) are appended after the answer so users can verify every claim.`,
-    category: "AI",
-    date: "Apr 2025",
+    date: "Oct 2024",
     readTime: "9 min read",
-    coverImage: "https://images.unsplash.com/photo-1555421689-d68471e189f2?w=800&q=80",
-    tags: ["LangChain", "RAG", "FastAPI", "Pinecone"],
-  },
-  {
-    id: "b5",
-    title: "ACE AI: Full-Stack Study Assistant with LangChain and Pinecone",
-    excerpt:
-      "Building ACE AI — a Next.js + FastAPI study assistant that combines document chat, quiz generation, note summarisation, and a web search agent in one cohesive app.",
-    content: `ACE AI combines four AI features that students actually need: document chat, quiz generation, note summarisation, and live web search. Here is how I built each one.\n\n**Document Chat with Pinecone**\nSame RAG pipeline as Document Chat (see previous post) but scoped to study materials. Each user's uploaded notes are namespaced in Pinecone so queries only search their own documents.\n\n**Quiz Generation**\nGiven a topic or uploaded doc, GPT-4o generates multiple-choice questions with distractors and explanations. I use structured output (JSON mode) and validate with Pydantic before returning to the client — no more hallucinated answer formats.\n\n**Web Search Agent**\nFor questions beyond the uploaded docs, a LangChain agent with a Tavily Search tool fetches current information. The agent decides whether to use search based on the query — it doesn't blindly call the web for every question.\n\n**Vercel AI SDK Integration**\nThe Next.js frontend uses useChat for the streaming chat UI and useCompletion for one-shot generation features (quiz, summary). Both connect to the same FastAPI backend via separate endpoints.`,
-    category: "AI",
-    date: "Mar 2025",
-    readTime: "8 min read",
-    coverImage: "https://images.unsplash.com/photo-1546410531-bb4caa6b424d?w=800&q=80",
-    tags: ["LangChain", "Next.js", "FastAPI", "Pinecone"],
-  },
-  {
-    id: "b6",
-    title: "Video2Text: AI Transcription Service with FastAPI and Whisper",
-    excerpt:
-      "How I built a production video-to-text transcription API using OpenAI Whisper and FastAPI — handling large files, async processing, and accurate speaker timestamps.",
-    content: `Video2Text lets users submit any video URL or upload a file and receive an accurate transcript within minutes. The engineering is straightforward but the edge cases are brutal.\n\n**Whisper for Transcription**\nOpenAI's Whisper large-v3 model is the quality bar to beat for transcription. I run it via the openai-whisper Python package on a CPU instance — GPU would be faster but the cost doesn't justify it for batch workloads.\n\n**Async Processing with FastAPI**\nLong videos can take minutes to process. The API accepts the job and returns a task ID immediately. A Celery worker picks up the job, processes it, and stores the result in Redis. The client polls the task status endpoint until completion.\n\n**Audio Extraction**\nffmpeg extracts audio from video before passing to Whisper. I chunk long audio into 30-minute segments to avoid memory issues on the worker. Segments are transcribed in parallel when multiple workers are available.\n\n**Timestamp & Speaker Info**\nWhisper's word-level timestamps are enabled for precise subtitle generation. For speaker diarisation (who said what), I integrate pyannote.audio as a post-processing step — it assigns speaker labels to each Whisper segment.`,
-    category: "AI",
-    date: "Feb 2025",
-    readTime: "7 min read",
-    coverImage: "https://images.unsplash.com/photo-1492619375914-88005aa9e8fb?w=800&q=80",
-    tags: ["FastAPI", "Whisper", "Python", "Docker"],
-  },
-  {
-    id: "b7",
-    title: "Building a Wedding Website with React: UX Lessons Learned",
-    excerpt:
-      "What I learned building a full wedding website — from RSVP flow design and photo gallery performance to guest-facing UX and mobile-first layout decisions.",
-    content: `Building a wedding website sounds simple. It isn't — guests range from 18 to 80, many on mobile, some on slow connections, all with zero tolerance for confusion.\n\n**RSVP Form UX**\nThe RSVP form went through four iterations. Key insight: multi-step forms with a progress indicator outperformed single-page forms for completion rate. Guests knew exactly how much was left.\n\n**Photo Gallery Performance**\nOriginal implementation loaded full-res images — page weight hit 40MB. Solution: sharp for server-side image resizing to multiple breakpoints, lazy loading with IntersectionObserver, and WebP with JPEG fallback. Page weight dropped to 3MB.\n\n**Mobile-First Everything**\nOver 70% of RSVP submissions came from mobile. I rebuilt the layout mobile-first with CSS Grid, ensuring tap targets were minimum 44×44px and form inputs didn't trigger unwanted zoom on iOS.\n\n**Animation Without Jank**\nUsed Framer Motion for entrance animations but wrapped every animation in a will-change: transform to keep compositing on the GPU. No layout thrash, smooth 60fps on mid-range Android devices.`,
-    category: "Full-Stack",
-    date: "Jan 2025",
-    readTime: "5 min read",
-    coverImage: "https://api.microlink.io/?url=https://site-weding.netlify.app/&screenshot=true&meta=false&embed=screenshot.url",
-    tags: ["React", "UX", "Performance", "JavaScript"],
-  },
-  {
-    id: "b8",
-    title: "Modern E-Commerce with React, Node.js, and Stripe",
-    excerpt:
-      "A practical guide to building a production e-commerce platform — cart state management, Stripe checkout integration, order management, and performance optimisation.",
-    content: `Building e-commerce from scratch teaches you exactly why Shopify exists. But doing it yourself gives you full control and a deep understanding of the moving parts.\n\n**Cart State Management**\nI used Zustand for cart state — simpler than Redux for this use case, with built-in persistence via zustand/middleware. The cart syncs to localStorage so it survives page refreshes.\n\n**Stripe Integration**\nStripe Checkout handles the payment page — no PCI scope, battle-tested UX. I use Stripe webhooks to update order status server-side. The webhook handler verifies the signature before processing to prevent spoofed events.\n\n**Order Management**\nOrders are stored in MongoDB with status transitions (pending → paid → shipped → delivered). An admin dashboard built with React Query and a simple Express API lets me manage inventory and update order statuses.\n\n**Performance**\nNext.js ISR (Incremental Static Regeneration) for product pages — they rebuild in the background when inventory changes, serving static HTML to users. Product pages load in under 500ms on a 4G connection.`,
-    category: "Full-Stack",
-    date: "Dec 2024",
-    readTime: "7 min read",
-    coverImage: "https://api.microlink.io/?url=https://modern-commerce-site.netlify.app/&screenshot=true&meta=false&embed=screenshot.url",
-    tags: ["React", "Node.js", "Stripe", "MongoDB"],
+    coverImage: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=800&q=80",
+    tags: ["Django", "React", "Redux", "PostgreSQL"],
   },
   {
     id: "b9",
@@ -559,18 +591,6 @@ export const blogPosts: BlogPost[] = [
     readTime: "6 min read",
     coverImage: "https://images.unsplash.com/photo-1478720568477-152d9b164e26?w=800&q=80",
     tags: ["React", "REST API", "Tailwind CSS", "JavaScript"],
-  },
-  {
-    id: "b10",
-    title: "Teamora: Multi-Tenant ERP Architecture with Django and React",
-    excerpt:
-      "Deep dive into Teamora's multi-tenant architecture — Django DRF for the API, React Redux for state, PostgreSQL row-level security for data isolation, and Redis for real-time features.",
-    content: `Multi-tenancy at the application level is one of those architectural decisions you want to get right from day one. Here is how Teamora handles it.\n\n**Tenant Isolation**\nEvery database row has a tenant_id foreign key. A custom Django middleware injects the tenant into every ORM query via a thread-local, so no query can accidentally leak data across tenants. PostgreSQL row-level security adds a database-level enforcement layer.\n\n**Django REST Framework Structure**\nViewSets with tenant-scoped querysets, serializers with nested relations, and custom permissions that check both authentication and tenant membership. API versioning via URL prefix (v1, v2) from day one.\n\n**Real-Time with Redis and Channels**\nProject status updates and notifications use Django Channels over WebSocket. Redis as the channel layer — all worker processes share the same pub/sub bus, so notifications reach users regardless of which dyno handles their WebSocket.\n\n**React Redux State**\nRedux Toolkit with RTK Query for API fetching. One slice per resource (projects, tasks, members). Optimistic updates for task status changes — the UI updates instantly while the API call happens in the background.`,
-    category: "Full-Stack",
-    date: "Oct 2024",
-    readTime: "9 min read",
-    coverImage: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=800&q=80",
-    tags: ["Django", "React", "Redux", "PostgreSQL"],
   },
   {
     id: "b11",
@@ -598,15 +618,246 @@ export const blogPosts: BlogPost[] = [
   },
   {
     id: "b13",
-    title: "Gelato Pique: Minimal Lifestyle Branding on the Web",
-    excerpt: "How I designed the Gelato Pique website — a premium loungewear brand requiring minimal aesthetics, seasonal lookbooks, and a seamless integrated shopping experience.",
-    content: `Gelato Pique is known for soft, pastel loungewear. The website had to feel as gentle and considered as the products.\n\n**Minimal Design System**\nA tight design system — two typefaces, a muted pastel palette, 8px grid — ensures every page feels cohesive. No component deviates from the system without reason.\n\n**Seasonal Campaign Pages**\nCampaign pages are rebuilt each season. I created a template system in Liquid so the in-house team can update seasonal content without touching code.\n\n**International Considerations**\nThe site serves both domestic and international customers. Locale detection switches language and currency automatically, and the checkout adapts to the selected region.`,
+    title: "Grainne Morton: Creating an Elegant Jewelry Brand Experience",
+    excerpt: "Exploring an elegant jewelry website design with editorial photography, refined typography, and a premium product browsing experience.",
+    content: `The Grainne Morton website showcases an artistic approach to jewelry and brand presentation. The design direction focuses on communicating craftsmanship, individuality, and timeless elegance.
+
+              **Editorial Visual Design**
+              The visual direction combines generous whitespace, elegant typography, and expressive product photography. The layout gives each jewelry piece room to stand out while maintaining a consistent brand identity.
+
+              **Product Presentation**
+              Product pages make it easy to explore collections, examine individual pieces, and understand product details. Clear navigation helps visitors move naturally between categories.
+
+              **Responsive Experience**
+              The experience prioritizes visual consistency across desktop, tablet, and mobile screens, keeping product imagery and navigation easy to use.`,
+    category: "Web Design",
+    date: "Aug 2025",
+    readTime: "5 min read",
+    coverImage: "https://images.unsplash.com/photo-1611652022419-a9419f74343d?auto=format&fit=crop&w=1200&q=85",
+    tags: ["Web Design", "E-Commerce", "CSS", "JavaScript"],
+  },
+  {
+    id: "b14",
+    title: "Acid League: Building a Bold and Colorful Food Brand Website",
+    excerpt: "A creative food brand website concept focused on vibrant visual identity, playful typography, and an engaging online shopping experience.",
+    content: `Acid League presents an unconventional approach to food branding. Its digital experience combines expressive visuals with a product-focused shopping journey.
+
+              **Bold Brand Identity**
+              The design direction uses vibrant colors, distinctive typography, and creative product imagery to establish a recognizable visual personality.
+
+              **Product Discovery**
+              Products are organized into clear categories, allowing customers to explore different flavors and collections. Product details and photography help communicate the brand's personality.
+
+              **Shopping Experience**
+              The storefront balances creative storytelling with practical shopping features, keeping navigation, product discovery, and purchasing straightforward.`,
+    category: "Web Design",
+    date: "Jul 2025",
+    readTime: "5 min read",
+    coverImage: "https://images.unsplash.com/photo-1472476443507-c7a5948772fc?auto=format&fit=crop&w=1200&q=85",
+    tags: ["Web Design", "E-Commerce", "Branding", "CSS"],
+  },
+  {
+    id: "b15",
+    title: "Canyon Coffee: Designing a Warm and Minimal Coffee Website",
+    excerpt: "A coffee brand website concept combining warm photography, minimal layouts, and thoughtful product storytelling.",
+    content: `Canyon Coffee offers a visual direction built around coffee culture, lifestyle photography, and a welcoming brand identity.
+
+              **Warm Visual Language**
+              The design uses natural tones, carefully selected photography, and clean typography to create a comfortable and inviting atmosphere.
+
+              **Product Architecture**
+              Coffee products and collections are presented through organized product grids. Each product page gives visitors a clear overview of the product and its characteristics.
+
+              **Brand Storytelling**
+              Editorial sections communicate the brand's identity and coffee culture, creating a connection between the products and the lifestyle surrounding them.`,
+    category: "Web Design",
+    date: "Jun 2025",
+    readTime: "5 min read",
+    coverImage: "https://images.unsplash.com/photo-1445116572660-236099ec97a0?auto=format&fit=crop&w=1200&q=85",
+    tags: ["Web Design", "E-Commerce", "Branding", "JavaScript"],
+  },
+  {
+    id: "b16",
+    title: "Lore Perfumery: Creating an Atmospheric Fragrance Website",
+    excerpt: "Exploring a cinematic fragrance website experience with atmospheric imagery, refined typography, and immersive product storytelling.",
+    content: `Lore Perfumery provides inspiration for a fragrance website built around atmosphere, emotion, and product identity.
+
+              **Immersive Visual Direction**
+              The design concept emphasizes rich imagery, carefully balanced typography, and a restrained color palette to create a distinctive visual experience.
+
+              **Fragrance Collections**
+              Products are organized into collections that make browsing intuitive. Individual product pages can highlight fragrance notes, inspiration, and product details.
+
+              **Storytelling Experience**
+              Editorial content gives each fragrance a stronger identity and helps visitors understand the inspiration behind the collection.`,
+    category: "Web Design",
+    date: "May 2025",
+    readTime: "5 min read",
+    coverImage: "https://images.unsplash.com/photo-1594035910387-fea47794261f?auto=format&fit=crop&w=1200&q=85",
+    tags: ["Web Design", "E-Commerce", "CSS", "Branding"],
+  },
+  {
+    id: "b17",
+    title: "Klur: Designing a Refined Luxury Skincare Website",
+    excerpt: "A minimalist skincare website concept featuring sophisticated typography, neutral colors, and an elegant product browsing experience.",
+    content: `Klur demonstrates how a skincare brand can communicate quality through simplicity, thoughtful photography, and a consistent visual language.
+
+              **Minimal Design System**
+              A neutral color palette, generous whitespace, and carefully selected typography create a refined and uncluttered interface.
+
+              **Product Information Architecture**
+              Products are organized to help visitors understand different skincare options. Individual pages can present ingredients, product benefits, and usage information.
+
+              **Mobile Shopping Experience**
+              The layout adapts to smaller screens while maintaining clear product imagery, readable information, and accessible shopping controls.`,
+    category: "Web Design",
+    date: "Apr 2025",
+    readTime: "5 min read",
+    coverImage: "https://images.unsplash.com/photo-1608248543803-ba4f8c70ae0b?auto=format&fit=crop&w=1200&q=85",
+    tags: ["Web Design", "E-Commerce", "CSS", "JavaScript"],
+  },
+  {
+    id: "b18",
+    title: "Oakâme: Creating a Modern Furniture and Interior Design Experience",
+    excerpt: "A furniture website design direction focused on architectural photography, natural materials, and contemporary visual storytelling.",
+    content: `Oakâme provides inspiration for a furniture and interior design experience where photography and spatial composition play an important role.
+
+              **Architectural Visual Design**
+              Large photographs, structured layouts, and understated typography create a premium presentation for furniture and interior collections.
+
+              **Collection Organization**
+              Products are grouped into intuitive categories, helping visitors explore furniture and discover pieces that fit their spaces.
+
+              **Editorial Storytelling**
+              Lifestyle imagery and interior-focused content help communicate the relationship between furniture, materials, and modern living.`,
+    category: "Web Design",
+    date: "Mar 2025",
+    readTime: "5 min read",
+    coverImage: "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1200&q=85",
+    tags: ["Web Design", "Interior Design", "CSS", "JavaScript"],
+  },
+  {
+    id: "b19",
+    title: "Hardgraft: Building a Premium Leather Accessories Storefront",
+    excerpt: "A premium accessories website design concept featuring product-focused layouts, rich textures, and sophisticated e-commerce presentation.",
+    content: `Hardgraft demonstrates a strong visual approach to presenting premium accessories through product photography and restrained design.
+
+              **Premium Visual Identity**
+              The design direction uses neutral colors, texture-rich photography, and minimal typography to keep attention on the products.
+
+              **Product Browsing**
+              Organized collections and clear product pages help visitors explore bags, accessories, and other items without unnecessary visual distractions.
+
+              **Conversion-Focused Layout**
+              Product details, pricing, and shopping actions are arranged to create a clear purchasing journey while preserving the brand's premium aesthetic.`,
     category: "Web Design",
     date: "Feb 2025",
     readTime: "5 min read",
-    coverImage: "https://api.microlink.io?url=https%3A%2F%2Fgelatopique.com%2F&screenshot=true&meta=false&embed=screenshot.url",
-    tags: ["Web Design", "Shopify", "Liquid", "Fashion"],
+    coverImage: "https://images.unsplash.com/photo-1548036328-c9fa89d128fa?auto=format&fit=crop&w=1200&q=85",
+    tags: ["Web Design", "E-Commerce", "CSS", "Branding"],
   },
+  {
+    id: "b20",
+    title: "Retrouvé: Designing an Elegant Luxury Skincare Experience",
+    excerpt: "A luxury skincare website design direction with editorial photography, sophisticated typography, and a clean shopping experience.",
+    content: `Retrouvé offers inspiration for a refined skincare website that combines product presentation with a strong luxury brand identity.
+
+              **Elegant Design Language**
+              The visual approach emphasizes subtle colors, carefully selected typography, and balanced spacing to create a sophisticated atmosphere.
+
+              **Product Storytelling**
+              Product pages can introduce skincare collections, explain product characteristics, and present important information in a structured format.
+
+              **Consistent User Experience**
+              Clear navigation and responsive layouts help visitors explore products comfortably across desktop and mobile devices.`,
+    category: "Web Design",
+    date: "Jan 2025",
+    readTime: "5 min read",
+    coverImage: "https://images.unsplash.com/photo-1556229010-6c3f2c9ca5f8?auto=format&fit=crop&w=1200&q=85",
+    tags: ["Web Design", "E-Commerce", "UX", "CSS"],
+  },
+  {
+    id: "b21",
+    title: "Honey Department: Creating a Distinctive Artisanal Food Store",
+    excerpt: "A creative food brand website concept featuring warm colors, distinctive packaging, and engaging product storytelling.",
+    content: `Honey Department provides inspiration for a food-focused e-commerce experience that makes product presentation central to the brand.
+
+              **Visual Brand Identity**
+              Warm tones, expressive product photography, and thoughtful typography create an inviting digital storefront.
+
+              **Product Organization**
+              A clear category structure helps visitors discover different products and understand the available collections.
+
+              **Content and Commerce**
+              The experience combines brand storytelling with practical shopping features, allowing visitors to explore products while learning about the brand.`,
+    category: "Web Design",
+    date: "Dec 2024",
+    readTime: "5 min read",
+    coverImage: "https://images.unsplash.com/photo-1587049352851-8d4e89133924?auto=format&fit=crop&w=1200&q=85",
+    tags: ["Web Design", "E-Commerce", "Branding", "CSS"],
+  },
+  {
+    id: "b22",
+    title: "Aura Estelle: Designing a Beautiful Stationery and Planner Store",
+    excerpt: "A stationery e-commerce design concept with soft colors, carefully organized product grids, and a welcoming lifestyle aesthetic.",
+    content: `Aura Estelle offers inspiration for a stationery store that makes everyday products feel visually appealing and personal.
+
+              **Soft Visual Identity**
+              A gentle color palette, elegant typography, and lifestyle photography create a cohesive and welcoming brand experience.
+
+              **Product Discovery**
+              Planners, stationery, and accessories can be organized into intuitive categories. Product grids make it easy to compare different designs and collections.
+
+              **Shopping Experience**
+              Product information and clear shopping actions help visitors move from browsing to purchasing with minimal friction.`,
+    category: "Web Design",
+    date: "Nov 2024",
+    readTime: "5 min read",
+    coverImage: "https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&w=1200&q=85",
+    tags: ["Web Design", "E-Commerce", "CSS", "JavaScript"],
+  },
+  {
+    id: "b23",
+    title: "Paper + Cup: Creating a Creative Stationery Shopping Experience",
+    excerpt: "A stationery website design direction focused on handcrafted aesthetics, thoughtful product presentation, and clean navigation.",
+    content: `Paper + Cup provides inspiration for a creative retail website where visual presentation and product discovery work together.
+
+            **Creative Art Direction**
+            The design direction uses carefully arranged imagery, simple layouts, and expressive details to create a distinctive storefront.
+
+            **Collection Presentation**
+            Products are displayed through organized collections, allowing visitors to discover stationery and related items easily.
+
+            **Responsive Design**
+            The interface is designed to maintain a consistent experience across devices, with accessible navigation and readable product information.`,
+    category: "Web Design",
+    date: "Oct 2024",
+    readTime: "5 min read",
+    coverImage: "https://images.unsplash.com/photo-1453738773917-9c3eff1db985?auto=format&fit=crop&w=1200&q=85",
+    tags: ["Web Design", "E-Commerce", "CSS", "UX"],
+  },
+  {
+    id: "b24",
+    title: "The Frankie Shop: Designing a Modern Editorial Fashion Store",
+    excerpt: "A contemporary fashion website design concept combining editorial photography, sophisticated typography, and a streamlined shopping experience.",
+    content: `The Frankie Shop offers inspiration for a contemporary fashion storefront where editorial presentation and product discovery are equally important.
+
+              **Editorial Design Direction**
+              Large fashion photography, clean typography, and structured layouts create a polished digital experience.
+
+              **Collection and Product Pages**
+              Collections are organized to make browsing intuitive. Product pages emphasize imagery, product details, and straightforward shopping actions.
+
+              **Mobile-First Shopping**
+              Responsive layouts keep the fashion imagery prominent while making navigation, product selection, and shopping controls accessible on smaller screens.`,
+    category: "Web Design",
+    date: "Sep 2024",
+    readTime: "5 min read",
+    coverImage: "https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=1200&q=85",
+    tags: ["Web Design", "E-Commerce", "Fashion", "CSS"],
+  }
+
+
 ]
 
 // ─── Stats Data ───────────────────────────────────────────────────────────────
@@ -647,19 +898,19 @@ export const statCards: StatItem[] = [
 ]
 
 export const techStats: TechStat[] = [
-  { id: "t1", name: "Python / FastAPI",    percentage: 95, color: "#f59e0b" },
-  { id: "t2", name: "React / Next.js",     percentage: 93, color: "#f59e0b" },
-  { id: "t3", name: "LangChain / RAG",     percentage: 92, color: "#f59e0b" },
-  { id: "t4", name: "TypeScript",          percentage: 90, color: "#f59e0b" },
-  { id: "t5", name: "AWS / Kubernetes",    percentage: 85, color: "#f59e0b" },
-  { id: "t6", name: "PostgreSQL / Redis",  percentage: 87, color: "#f59e0b" },
-  { id: "t7", name: "Docker / CI-CD",      percentage: 88, color: "#f59e0b" },
-  { id: "t8", name: "Go",                  percentage: 74, color: "#f59e0b" },
+  { id: "t1", name: "Python / FastAPI", percentage: 95, color: "#f59e0b" },
+  { id: "t2", name: "React / Next.js", percentage: 93, color: "#f59e0b" },
+  { id: "t3", name: "LangChain / RAG", percentage: 92, color: "#f59e0b" },
+  { id: "t4", name: "TypeScript", percentage: 90, color: "#f59e0b" },
+  { id: "t5", name: "AWS / Kubernetes", percentage: 85, color: "#f59e0b" },
+  { id: "t6", name: "PostgreSQL / Redis", percentage: 87, color: "#f59e0b" },
+  { id: "t7", name: "Docker / CI-CD", percentage: 88, color: "#f59e0b" },
+  { id: "t8", name: "Go", percentage: 74, color: "#f59e0b" },
 ]
 
 export const githubStats = [
-  { label: "Public Repos",    value: "30+",  Icon: BsCodeSlash  },
-  { label: "Total Commits",   value: "1.2k+", Icon: BsGraphUp   },
-  { label: "Pull Requests",   value: "300+", Icon: BsAwardFill  },
-  { label: "Contributions",   value: "800+", Icon: BsGlobe      },
+  { label: "Public Repos", value: "30+", Icon: BsCodeSlash },
+  { label: "Total Commits", value: "1.2k+", Icon: BsGraphUp },
+  { label: "Pull Requests", value: "300+", Icon: BsAwardFill },
+  { label: "Contributions", value: "800+", Icon: BsGlobe },
 ]
