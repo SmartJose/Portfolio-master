@@ -315,7 +315,7 @@ export const worksData: WorkData[] = [
     description:
       "Full-featured online course platform with video lessons, Stripe payments, progress tracking, and instructor dashboards. Built with Next.js 15 and Drizzle ORM.",
     liveUrl: "https://coode-platform.vercel.app",
-    githubUrl: "https://github.com/SmartJose/Full-stack-Online-Course-Platform",
+    githubUrl: "https://github.com/SmartJose/Full-stack-Online-Course-Platform-main",
     images: [
       { url: "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=800&q=80" },
     ],
